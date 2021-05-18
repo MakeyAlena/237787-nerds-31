@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Алёна Макей](https://up.htmlacademy.ru/htmlcss/31/user/237787).
-* Наставник: `Неизвестно`.
+* Наставник: [Артур Трифонов](https://htmlacademy.ru/profile/wrgraff).
 
 ---
 
