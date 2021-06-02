@@ -1,5 +1,32 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/roboto.woff2") format("woff2"),
+       url("../fonts/roboto.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+       url("../fonts/robotomedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+       url("../fonts/robotobold.woff") format("woff");
+}
+
 :root {
-  --color-white-900: #ffffff;
+  --color-white: #ffffff;
   --color-grey-200: #eeeeee;
   --color-grey-250: #dbdbdb;
   --color-grey-300: #d7dcde;
@@ -8,7 +35,7 @@
   --color-grey-500: #666666;
   --color-grey-600: #444444;
   --color-grey-700: #283136;
-  --color-black-900: #000000;
+  --color-black: #000000;
   --color-green-500: #00ca74;
   --color-green-600: #00bc6c;
   --color-yellow-500: #efc849;
@@ -60,7 +87,7 @@
 
 .site-navigation a,
 .user-navigation a {
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 .site-navigation a:hover,
@@ -72,6 +99,7 @@
 
 .page-title {
   background-color: var(--color-grey-200);
+  color: var(--color-black);
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
@@ -96,19 +124,16 @@
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 /* Button */
 
 .button {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  font-family: inherit;
   line-height: 18px;
   text-align: center;
-  color: var(--color-white-900);
+  color: var(--color-white);
   vertical-align: middle;
   text-transform: uppercase;
   background-color: var(--color-red-500);
@@ -121,53 +146,55 @@
   background-color: var(--color-red-600);
 }
 
-/* Services */
-
-.services-list {
-  list-style: none;
-}
-
-.services-item .services-item h3 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  color: var(--color-black-900);
-}
-
-.services-item a {
+.services-button {
+  font-family: inherit;
   text-decoration: none;
-  color: var(--color-white-900);
+  color: var(--color-white);
   text-transform: uppercase;
   font-weight: 500;
   line-height: 18px;
   text-align: center;
 }
 
-.services-sites {
+.button-sites {
   background-color: var(--color-red-500);
 }
 
-.services-apps {
+.button-apps {
   background-color: var(--color-green-500);
 }
 
-.services-presentations {
+.button-presentations {
   background-color: var(--color-yellow-500);
 }
 
-.services-sites:hover,
-.services-sites:focus {
+.button-sites:hover,
+.button-sites:focus {
   background-color: var(--color-red-600);
 }
 
-.services-apps:hover,
-.services-apps:focus {
+.button-apps:hover,
+.button-apps:focus {
   background-color: var(--color-green-600);
 }
 
-.services-presentations:hover,
-.services-presentations:focus {
+.button-presentations:hover,
+.button-presentations:focus {
   background-color: var(--color-yellow-600);
+}
+
+/* Services */
+
+.services-list {
+  list-style: none;
+}
+
+.services-item h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--color-black);
 }
 
 /* Promo */
@@ -176,7 +203,7 @@
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 .promo h3 {
@@ -193,7 +220,7 @@
 .achievement-title {
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 .achievement-list {
@@ -204,7 +231,7 @@
   font-weight: 700;
   font-size: 45px;
   line-height: 64px;
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 /* Clients */
@@ -227,7 +254,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
-  color: var(--color-black-900);
+  color: var(--color-black);
   text-transform: uppercase;
 }
 
@@ -253,7 +280,7 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 .footer-sale {
@@ -264,7 +291,7 @@
 /* Popup */
 
 .popup {
-  color: var(--color-black-900);
+  color: var(--color-black);
   line-height: 18px;
 }
 
@@ -300,7 +327,7 @@
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 .filter-price {
@@ -320,19 +347,19 @@
 .filter ul {
   list-style: none;
   line-height: 20px;
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 .filter-input-checkbox:hover + label,
 .filter-input-checkbox:focus + label {
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 .filter-button {
   font-weight: 500;
   line-height: 18px;
   text-align: center;
-  color: var(--color-black-900);
+  color: var(--color-black);
   background: var(--color-grey-200);
   text-transform: uppercase;
   border: none;
@@ -350,12 +377,12 @@
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 .sorting a {
   text-decoration: none;
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 .sorting-list {
@@ -366,18 +393,22 @@
 }
 
 .sorting-item {
+  color: var(--color-black);
   opacity: 0.3;
 }
 
 .sorting-item a:hover,
 .sorting-item a:focus {
-  color: var(--color-black-900);
   opacity: 0.6;
+}
+
+.sorting-item-current {
+  opacity: 1;
 }
 
 .sorting-item-current a:hover,
 .sorting-item-current a:focus {
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 /* Catalog */
@@ -396,7 +427,7 @@
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
-  color: var(--color-black-900);
+  color: var(--color-black);
 }
 
 .catalog-discripnion-title h3:hover,
@@ -418,7 +449,7 @@
 
 .pagination-item a {
   text-decoration: none;
-  color: var(--color-black-900);
+  color: var(--color-black);
   background-color: var(--color-grey-200);
 }
 
@@ -430,7 +461,7 @@
 .pagination-item-current a,
 .pagination-item-current a:hover,
 .pagination-item-current a:focus {
-  color: var(--color-black-900);
-  background-color: var(--color-white-900);
+  color: var(--color-black);
+  background-color: var(--color-white);
   border: 3px solid var(--color-grey-250);
 }
