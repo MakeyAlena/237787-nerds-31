@@ -14,7 +14,7 @@
 
 <body class="page-body">
   <header class="main-header">
-    <nav class="main-navigation">
+    <nav class="main-navigation container">
       <a class="main-header-logo">
         <img src="images/nerds-logo.svg" width="160" height="66" alt="Логотип студии Нёрдс">
       </a>
@@ -39,9 +39,9 @@
   </header>
 
   <main>
-    <div class="wrapper-slider">
-      <h1 class="visually-hidden page-title">Дизайн-студия «Нёрдс»</h1>
-      <section class="slider">
+    <h1 class="visually-hidden">Дизайн-студия «Нёрдс»</h1>
+    <div class="slider-wrapper">
+      <section class="slider container">
         <h2 class="visually-hidden">О нас</h2>
         <ul class="slider-list">
           <li class="slider-item">
@@ -72,31 +72,30 @@
             </div>
             <div>
               <img src="images/slider/slide-three.png" width="760" height="431" alt="Планшет и смартфон">
+            </div>
           </li>
         </ul>
         <button type="button">перейти на слайд №1</button>
         <button type="button">перейти на слайд №2</button>
         <button type="button">перейти на слайд №3</button>
       </section>
-      </div>
-      <div class="contener">
+    </div>
+
+      <div class="container">
         <section class="services">
           <h2 class="visually-hidden">Услуги</h2>
           <ul class="services-list">
             <li class="services-item">
-              <div class="services-image image-sites"></div>
               <h3>Веб-сайты</h3>
               <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
               <a class="services-button button-sites" href="blank.html">Заказать</a>
             </li>
             <li class="services-item">
-              <div class="services-image image-apps"></div>
               <h3>Приложения</h3>
               <p>Покорите топ-10 приложений в AppStore и Google Play</p>
               <a class="services-button button-apps" href="blank.html">Заказать</a>
             </li>
             <li class="services-item">
-              <div class="services-image image-presentations"></div>
               <h3>Презентации</h3>
               <p>Вы даже не подозреваете, насколько вы изумительны!</p>
               <a class="services-button button-presentations" href="blank.html">Заказать</a>
@@ -104,40 +103,41 @@
           </ul>
         </section>
 
-        <section>
+        <section class="about-company">
           <h2 class="visually-hidden">О компании</h2>
-          <div class="about-company">
-            <div class="promo">
-              <p class="promo-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-              <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая
-                рук, как роботы.</p>
-              <h3>Выполняем заказы на разработку:</h3>
-              <ul class="promo-list">
-                <li>Веб-сайтов любой сложности</li>
-                <li>Мобильных приложений для iOS и Android</li>
-                <li>Слайдшоу и видео для корпоративных презентаций</li>
-              </ul>
-            </div>
-            <div class="achievement">
-              <div class="achievement-image"></div>
-              <p class="achievement-title">с 2004 года Любим точность во всем:</p>
-              <ul class="achievement-list">
-                <li class="achievement-item">
-                  <p>
-                    <span>146%</span> Уровень самоотдачи
-                  </p>
-                </li>
-                <li class="achievement-item">
-                  <p>
-                    <span>100%</span> Соблюдение сроков
-                  </p>
-                </li>
-                <li class="achievement-item">
-                  <p>
-                    <span>50%</span> Минимальная предоплата
-                  </p>
-                </li>
-              </ul>
+          <div class="promo">
+            <p class="promo-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+            <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая
+              рук, как роботы.</p>
+            <h3>Выполняем заказы на разработку:</h3>
+            <ul class="promo-list">
+              <li>Веб-сайтов любой сложности</li>
+              <li>Мобильных приложений для iOS и Android</li>
+              <li>Слайдшоу и видео для корпоративных презентаций</li>
+            </ul>
+          </div>
+
+          <div class="achievement">
+            <div class="achievement-image"></div>
+            <p class="achievement-title">с 2004 года Любим точность во всем:</p>
+            <ul class="achievement-list">
+              <li class="achievement-item">
+                <p>
+                  <span>146%</span> Уровень самоотдачи
+                </p>
+              </li>
+              <li class="achievement-item">
+                <p>
+                  <span>100%</span> Соблюдение сроков
+                </p>
+              </li>
+              <li class="achievement-item">
+                <p>
+                  <span>50%</span> Минимальная предоплата
+                </p>
+              </li>
+            </ul>
+          </div>
         </section>
 
         <section class="clients">
@@ -165,49 +165,44 @@
             </li>
           </ul>
         </section>
-        </div>
+      </div>
   </main>
 
   <footer class="main-footer">
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts-wrapper">
-        <img class="map" src="images/map.png" width="100%" height="416" alt="Карта проезда">
-        <div class="adress">
+      <div class="contacts-wrapper container">
+        <img class="contacts-map" src="images/map.png" width="1440px" height="416" alt="Карта проезда">
+        <div class="contacts-address">
           <h3>NЁRDS DESIGN STUDIO</h3>
           <p>
             наб. Реки Карповки, 5 лит П, Санкт-Петербург
-            <a class="telephone" href="tel:+78005558628"> +7 800 555-86-28 </a>
+            <a class="contacts-telephone" href="tel:+78005558628"> +7 800 555-86-28 </a>
           </p>
           <a class="button" href="#">Напишите нам</a>
         </div>
+      </div>
     </section>
 
-    <section class="footer-social contener">
+    <section class="footer-social container">
       <h2 class="visually-hidden">Наши социальные сети</h2>
-      <div class="social-wrapper">
-        <div>
-          <ul class="social-list">
-            <li class="social-item">
-              <a class="social-button" href="#">Вконтакте</a>
-            </li>
-            <li>
-              <a class="social-button" href="#">Фейсбук</a>
-            </li>
-            <li>
-              <a class="social-button" href="#">Инстаграм</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer-title">
-            Давайте дружить, это выгодно!
-          </p>
-          <p class="footer-sale">
-            Скидка 10% для друзей из социальных сетей.
-          </p>
-        </div>
-      </div>
+      <ul class="social-list">
+        <li class="social-item">
+          <a class="social-button" href="#">Вконтакте</a>
+        </li>
+        <li>
+          <a class="social-button" href="#">Фейсбук</a>
+        </li>
+        <li>
+          <a class="social-button" href="#">Инстаграм</a>
+        </li>
+      </ul>
+      <p class="footer-title">
+        Давайте дружить, это выгодно!
+      </p>
+      <p class="footer-sale">
+        Скидка 10% для друзей из социальных сетей.
+      </p>
     </section>
   </footer>
 
