@@ -32,6 +32,7 @@
   --color-grey-300: #d7dcde;
   --color-grey-350: #dfdfdf;
   --color-grey-400: #888888;
+  --color-grey-450: #c1c1c1;
   --color-grey-500: #666666;
   --color-grey-600: #444444;
   --color-grey-700: #283136;
@@ -83,7 +84,16 @@
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Main header */
@@ -91,15 +101,13 @@
 .main-header {
   background-color: var(--color-grey-200);
 }
-.main-header-logo {
-  margin-top: 49px;
-}
 
 /* Main navigation */
 
 .main-navigation {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 160px 1fr 160px;
+  gap: 20px;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
@@ -109,20 +117,24 @@
   text-decoration: none;
 }
 
+.main-header-logo {
+  align-self: end;
+}
+
 /* Site Navigation */
 
 .site-navigation {
   line-height: 30px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   padding: 0;
   list-style: none;
   text-transform: uppercase;
   margin-top: 75px;
 }
 
-.site-navigation li {
-  margin-right: 45px;
+.site-navigation a {
+  padding: 0 22px;
 }
 
 /* User navigation */
@@ -130,6 +142,19 @@
 .user-navigation {
   margin-bottom: 0;
   margin-top: 75px;
+  position: relative;
+}
+
+.user-navigation-cart::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -35px;
+  width: 15px;
+  height: 11px;
+  background-image: url("../images/icon/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .site-navigation a,
@@ -166,6 +191,7 @@
 }
 
 .slider-discripnion {
+  width: 538px;
   z-index: 1;
   position: relative;
   padding-top: 87px;
@@ -189,9 +215,51 @@
   position: absolute;
 }
 
+.slider-controls {
+  position: absolute;
+  bottom: 158px;
+  left: 50%;
+  z-index: 20;
+  display: flex;
+  width: 88px;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
+
+.slider-controls .current::before {
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px;
+  content: "";
+  border: 2px solid var(--color-grey-450);
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: inherit;
+}
+
 /* Button */
 
 .button {
+  display: inline-block;
   font-family: inherit;
   line-height: 18px;
   text-align: center;
@@ -201,6 +269,9 @@
   background-color: var(--color-red-500);
   border: none;
   text-decoration: none;
+  border-radius: 3px;
+  padding: 17px 40px 15px 40px;
+  box-sizing: border-box;
 }
 
 .button:hover,
@@ -209,8 +280,8 @@
 }
 
 .slider-button {
-  max-width: 240px;
-  padding: 17px 54px 15px 54px;
+  margin-bottom: 80px;
+  min-width: 240px;
 }
 
 .services-button {
@@ -221,8 +292,8 @@
   font-weight: 500;
   line-height: 18px;
   text-align: center;
-  max-width: 160px;
   padding: 17px 40px 15px 40px;
+  border-radius: 3px;
 }
 
 .button-sites {
@@ -238,8 +309,7 @@
 }
 
 .button-contacts {
-  width: 219px;
-  padding: 17px 44px 15px 44px;
+  min-width: 100%;
 }
 
 .button-sites:hover,
@@ -273,23 +343,51 @@
   list-style: none;
 }
 
+.services-item {
+  position: relative;
+}
+
+.services-item ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 146px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.services-item-sites ::after {
+  background-image: url("../images/illustration/sites.png");
+}
+
+.services-item-apps ::after {
+  background-image: url("../images/illustration/apps.png");
+}
+
+.services-item-presentations ::after {
+  background-image: url("../images/illustration/presentations.png");
+}
+
 .services-item h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--color-black);
+  padding-top: 151px;
 }
 
 .services-item p {
   width: 260px;
-  padding-bottom: 32px;
 }
 
 .about-company {
   display: grid;
   grid-template-columns: 1fr 360px;
   gap: 150px;
+  border-bottom: 2px solid var(--color-grey-200);
 }
 
 /* Promo */
@@ -299,11 +397,14 @@
   font-size: 45px;
   line-height: 45px;
   color: var(--color-black);
+  margin-top: 73px;
+  margin-bottom: 32px;
 }
 
 .promo h3 {
   text-transform: uppercase;
   font-weight: 700;
+  margin-top: 40px;
 }
 
 .promo-list {
@@ -312,18 +413,50 @@
   list-style: none;
 }
 
+.promo-list li {
+  position: relative;
+  padding-right: 0;
+  padding-bottom: 25px;
+  padding-left: 32px;
+}
+
+.promo-list li:before {
+  position: absolute;
+  top: 10px;
+  left: -3px;
+  width: 25px;
+  height: 2px;
+  content: "";
+  background-color: var(--color-red-500);
+}
+
 /* Achievement */
 
 .achievement-title {
   text-transform: uppercase;
   font-weight: 700;
   color: var(--color-black);
+  position: relative;
+  padding-top: 230px;
+}
+
+.achievement-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 208px;
+  background-image: url("../images/illustration/nerds-illustration.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .achievement-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .achievement-item span {
@@ -331,22 +464,30 @@
   font-size: 45px;
   line-height: 64px;
   color: var(--color-black);
+  padding-right: 20px;
+}
+
+.achievement-item span:last-child {
+  margin-right: 0;
 }
 
 /* Clients */
 
 .clients {
+  border-bottom: 2px solid var(--color-grey-200);
   margin-top: 75px;
   margin-bottom: 80px;
 }
 
 .clients-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   list-style: none;
   margin: 0;
   padding: 0;
+  margin: 0 auto;
+  max-height: 180px;
+  text-align: center;
 }
 
 /* Main footer */
