@@ -4,7 +4,7 @@
   font-style: normal;
   font-display: swap;
   src: url("../fonts/roboto.woff2") format("woff2"),
-       url("../fonts/roboto.woff") format("woff");
+    url("../fonts/roboto.woff") format("woff");
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   font-style: normal;
   font-display: swap;
   src: url("../fonts/robotomedium.woff2") format("woff2"),
-       url("../fonts/robotomedium.woff") format("woff");
+    url("../fonts/robotomedium.woff") format("woff");
 }
 
 @font-face {
@@ -22,7 +22,7 @@
   font-style: normal;
   font-display: swap;
   src: url("../fonts/robotobold.woff2") format("woff2"),
-       url("../fonts/robotobold.woff") format("woff");
+    url("../fonts/robotobold.woff") format("woff");
 }
 
 :root {
@@ -759,8 +759,8 @@
   display: flex;
 }
 
-.login-form input[type="email"],
-.login-form input[type="text"] {
+.form-write-us input[type="email"],
+.form-write-us input[type="text"] {
   line-height: 18px;
   color: var(--color-grey-600);
   opacity: 0.5;
@@ -774,21 +774,21 @@
   padding-right: 15px;
 }
 
-.login-form input[type="email"]:hover,
-.login-form input[type="text"]:hover,
-.login-form textarea:hover {
+.form-write-us input:hover,
+.form-write-us input:hover,
+.form-write-us textarea:hover {
   border: 2px solid var(--color-grey-520);
 }
 
-.login-form input[type="email"]:focus,
-.login-form input[type="text"]:focus,
-.login-form textarea:focus {
+.form-write-us input:focus,
+.form-write-us input:focus,
+.form-write-us textarea:focus {
   border: 2px solid var(--color-black);
   outline: none;
 }
 
-.login-form input[type="email"]:invalid,
-.login-form input[type="text"]:invalid {
+.form-write-us input:invalid,
+.form-write-us input:invalid {
   border: 2px solid var(--color-red-600);
 }
 
