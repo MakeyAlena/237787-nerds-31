@@ -116,7 +116,7 @@
 
 .main-header {
   background-color: var(--color-grey-200);
-  padding-top: 75px;
+  padding-top: 52px;
 }
 
 .main-header-logo:hover,
@@ -156,7 +156,7 @@
 }
 
 .site-navigation a {
-  padding: 22px;
+  padding: 23px;
 }
 
 .site-navigation-current {
@@ -181,16 +181,16 @@
 
 .user-navigation .user-navigation-cart {
   position: relative;
-  padding-left: 50px;
+  padding-left: 85px;
 }
 
 .user-navigation-cart::before {
   content: "";
   position: absolute;
   top: 3px;
-  left: 25px;
+  left: 45px;
   width: 15px;
-  height: 11px;
+  height: 15px;
   background-image: url("../images/icon/cart-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -243,7 +243,7 @@
   width: 538px;
   z-index: 1;
   position: relative;
-  padding-top: 87px;
+  padding-top: 66px;
 }
 
 .slider-title {
@@ -259,8 +259,8 @@
 }
 
 .slider-image {
-  top: 0;
-  right: 0;
+  top: -13px;
+  right: 3px;
   position: absolute;
 }
 
@@ -268,7 +268,7 @@
   position: absolute;
   right: 300px;
   left: 300px;
-  bottom: 95px;
+  bottom: 110px;
   z-index: 2;
   display: flex;
   flex-wrap: wrap;
@@ -284,7 +284,7 @@
   border-radius: 50%;
   cursor: pointer;
   border: none;
-  margin: 0 10px;
+  margin: 0 9px;
 }
 
 .slide {
@@ -348,6 +348,8 @@
   text-align: center;
   padding: 17px 40px 15px 40px;
   border-radius: 3px;
+  margin-top: 17px;
+  margin-bottom: 80px;
 }
 
 .button-sites {
@@ -384,14 +386,14 @@
 /* Services */
 
 .services {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 66px;
+  border-bottom: 2px solid var(--color-grey-200);
 }
 
 .services-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 100px;
+  gap: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -399,7 +401,7 @@
 
 .services-item {
   position: relative;
-  padding-top: 151px;
+  padding-top: 146px;
 }
 
 .services-item::after {
@@ -431,6 +433,7 @@
   line-height: 30px;
   text-transform: uppercase;
   color: var(--color-black);
+  margin-bottom: 15px;
 }
 
 .services-item p {
@@ -441,7 +444,8 @@
   display: grid;
   grid-template-columns: 1fr 360px;
   gap: 150px;
-  border-bottom: 2px solid var(--color-grey-200);
+  margin-top: 39px;
+  margin-bottom: 44px;
 }
 
 /* Promo */
@@ -451,7 +455,7 @@
   font-size: 45px;
   line-height: 45px;
   color: var(--color-black);
-  margin-top: 73px;
+  margin-top: 35px;
   margin-bottom: 32px;
 }
 
@@ -469,15 +473,14 @@
 
 .promo-list li {
   position: relative;
-  padding-right: 0;
-  padding-bottom: 25px;
-  padding-left: 32px;
+  padding-bottom: 27px;
+  padding-left: 36px;
 }
 
 .promo-list li::before {
   position: absolute;
   top: 10px;
-  left: -3px;
+  left: 0px;
   width: 25px;
   height: 2px;
   content: "";
@@ -489,13 +492,14 @@
 .achievement {
   background-image: url("../images/illustration/nerds-illustration.png");
   background-repeat: no-repeat;
-  padding-top: 230px;
+  padding-top: 229px;
 }
 
 .achievement-title {
   text-transform: uppercase;
   font-weight: 700;
   color: var(--color-black);
+  padding-left: 17px;
 }
 
 .achievement-list {
@@ -506,11 +510,12 @@
 }
 
 .achievement-item span {
+  display: inline-block;
   font-weight: 700;
   font-size: 45px;
   line-height: 64px;
   color: var(--color-black);
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 .achievement-item span:last-child {
@@ -520,8 +525,8 @@
 /* Clients */
 
 .clients {
+  border-top: 2px solid var(--color-grey-200);
   border-bottom: 2px solid var(--color-grey-200);
-  margin-bottom: 78px;
 }
 
 .clients-list {
@@ -531,9 +536,9 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  gap: 10px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  gap: 35px;
+  padding-top: 60px;
+  padding-bottom: 25px;
 }
 
 .clients-list img {
@@ -547,7 +552,7 @@
 
 .clients-item::after {
   position: absolute;
-  right: 100%;
+  left:-20px;
   bottom: 30%;
   width: 2px;
   height: 52px;
@@ -581,6 +586,7 @@
   z-index: 0;
   overflow: hidden;
   margin-bottom: 75px;
+  margin-top: 80px;
   min-height: 416px;
 }
 
@@ -610,7 +616,7 @@
 .contacts-address {
   position: relative;
   width: 320px;
-  padding: 50px;
+  padding: 30px 50px;
   background: var(--color-white);
   box-sizing: border-box;
   z-index: 2;
@@ -632,8 +638,8 @@
 .contacts-telephone {
   text-decoration: none;
   color: var(--color-grey-500);
-  margin-top: 18px;
-  margin-bottom: 37px;
+  margin-top: 22px;
+  margin-bottom: 22px;
   display: inline-block;
 }
 
@@ -651,6 +657,7 @@
   list-style: none;
   grid-row-start: 1;
   grid-row-end: 3;
+  padding: 0;
 }
 
 .social-item {
@@ -718,14 +725,14 @@
   line-height: 36px;
   color: var(--color-black);
   margin: 0;
-  margin-left: 130px;
+  margin-left: 100px;
 }
 
 .footer-sale {
   line-height: 22px;
   color: var(--color-grey-600);
   margin: 0;
-  margin-left: 130px;
+  margin-left: 100px;
 }
 
 /* Popup */
@@ -759,7 +766,6 @@
   display: flex;
 }
 
-.form-write-us input,
 .form-write-us input {
   line-height: 18px;
   color: var(--color-grey-600);
@@ -785,7 +791,6 @@
   outline: none;
 }
 
-.form-invalid input:invalid,
 .form-invalid input:invalid {
   border: 2px solid var(--color-red-600);
 }
