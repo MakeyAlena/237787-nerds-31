@@ -759,8 +759,8 @@
   display: flex;
 }
 
-.form-write-us input[type="email"],
-.form-write-us input[type="text"] {
+.form-write-us input,
+.form-write-us input {
   line-height: 18px;
   color: var(--color-grey-600);
   opacity: 0.5;
@@ -775,20 +775,18 @@
 }
 
 .form-write-us input:hover,
-.form-write-us input:hover,
 .form-write-us textarea:hover {
   border: 2px solid var(--color-grey-520);
 }
 
-.form-write-us input:focus,
 .form-write-us input:focus,
 .form-write-us textarea:focus {
   border: 2px solid var(--color-black);
   outline: none;
 }
 
-.form-write-us input:invalid,
-.form-write-us input:invalid {
+.form-invalid input:invalid,
+.form-invalid input:invalid {
   border: 2px solid var(--color-red-600);
 }
 
