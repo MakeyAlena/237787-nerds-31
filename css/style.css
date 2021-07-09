@@ -79,6 +79,7 @@
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 .page-title {
@@ -413,17 +414,21 @@
   height: 146px;
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-color: var(--color-grey-200);
 }
 
 .services-item-sites::after {
+  background-color: var(--color-red-500);
   background-image: url("../images/illustration/sites.png");
 }
 
 .services-item-apps::after {
+  background-color: var(--color-green-500);
   background-image: url("../images/illustration/apps.png");
 }
 
 .services-item-presentations::after {
+  background-color: var(--color-yellow-500);
   background-image: url("../images/illustration/presentations.png");
 }
 
@@ -463,6 +468,8 @@
   text-transform: uppercase;
   font-weight: 700;
   margin-top: 40px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .promo-list {
@@ -516,6 +523,7 @@
   line-height: 64px;
   color: var(--color-black);
   margin-right: 22px;
+  vertical-align: middle;
 }
 
 .achievement-item sup {
@@ -604,7 +612,7 @@
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: 3;
   background: var(--color-grey-200);
   min-height: 100%;
   min-width: 100%;
@@ -612,8 +620,8 @@
   border: none;
 }
 
-.contacts-map-iframe {
-  z-index: 2;
+.iframe-loaded {
+  z-index: 4;
 }
 
 .contacts-address {
@@ -622,7 +630,7 @@
   padding: 30px 50px;
   background: var(--color-white);
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 4;
 }
 
 .contacts h3 {
@@ -644,6 +652,7 @@
   margin-top: 22px;
   margin-bottom: 22px;
   display: inline-block;
+  vertical-align: middle;
 }
 
 /* Social button */
@@ -1097,6 +1106,7 @@
 
 .filter-button:active {
   background: var(--color-grey-750);
+  color: var(--color-black-opacity-30);
   box-shadow: inset 0px 3px 0px var(--color-black-opacity-10);
 }
 

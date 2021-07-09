@@ -1,3 +1,4 @@
+(() => {
 const PopupButton = document.querySelector(".button-contacts");
 const Popup = document.querySelector(".popup");
 const PopupClose = Popup.querySelector(".close-popup");
@@ -56,3 +57,5 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+})()
+
