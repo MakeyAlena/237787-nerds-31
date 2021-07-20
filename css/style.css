@@ -787,12 +787,11 @@
 
 .popup-input-wraper {
   display: flex;
+  color: var(--color-grey-600);
 }
 
 .form-write-us input {
   line-height: 18px;
-  color: var(--color-grey-600);
-  opacity: 0.5;
   border: 2px solid var(--color-grey-300);
   box-sizing: border-box;
   border-radius: 3px;
@@ -801,6 +800,10 @@
   padding-bottom: 13px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+::placeholder {
+  opacity: 0.5;
 }
 
 .form-write-us input:hover,
@@ -820,8 +823,8 @@
 
 .comment-discription {
   line-height: 18px;
-  color: var(--color-grey-600);
-  opacity: 0.5;
+
+
   border: 2px solid var(--color-grey-300);
   box-sizing: border-box;
   border-radius: 3px;
